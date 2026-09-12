@@ -37,7 +37,7 @@ python -m pip install \
 	.
 
 %files
-%doc README.md
+%doc README.rst
 %license LICENSE
 %{python_sitearch}/fastuuid*
 %{python_sitearch}/fastuuid-*.*-info
