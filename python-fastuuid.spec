@@ -15,6 +15,7 @@ BuildRequires:	python%{pyver}dist(maturin)
 BuildRequires:	cargo
 BuildRequires:	rust-packaging
 BuildRequires:	clang
+%undefine _debugsource_packages
 
 %description
 Fast UUID generation via Rust. Required by LiteLLM.
@@ -39,5 +40,5 @@ python -m pip install \
 %files
 %doc README.rst
 %license LICENSE
-%{python_sitearch}/fastuuid*
+%{python_sitearch}/fastuuid
 %{python_sitearch}/fastuuid-*.*-info
