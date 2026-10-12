@@ -13,7 +13,6 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(maturin)
 BuildRequires:	cargo
-BuildRequires:	rust-packaging
 BuildRequires:	clang
 %undefine _debugsource_packages
 
