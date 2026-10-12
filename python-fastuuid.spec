@@ -22,7 +22,7 @@ BuildRequires:	clang
 Fast UUID generation via Rust. Required by LiteLLM.
 
 %prep
-%autosetup -n fastuuid-%{version}
+%autosetup -p1 -n fastuuid-%{version}
 tar -xf %{SOURCE1}
 install -D -m 0644 %{SOURCE2} .cargo/config.toml
 
