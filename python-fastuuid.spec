@@ -8,6 +8,8 @@ URL:		https://github.com/thedrow/fastuuid
 Source0:	https://files.pythonhosted.org/packages/source/f/fastuuid/fastuuid-%{version}.tar.gz
 Source1:	cargo-vendor-for-fastuuid-%{version}.tar.xz
 Source2:	cargo-config.toml
+# PyO3 0.26 does not support Python 3.15. 0.29 does, and Bound::downcast was renamed to cast.
+Patch0:		python-fastuuid-pyo3-0.29.patch
 BuildRequires:	python
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
@@ -37,7 +39,9 @@ python -m pip install \
 	.
 
 %files
+%license LICENSE
 %doc README.rst
+%{python_sitearch}/fastuuid*
 %license LICENSE
 %{python_sitearch}/fastuuid
 %{python_sitearch}/fastuuid-*.*-info
