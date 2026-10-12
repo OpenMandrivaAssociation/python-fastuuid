@@ -1,6 +1,6 @@
 Name:		python-fastuuid
 Version:	0.14.0
-Release:	1
+Release:	2
 Summary:	Python bindings to the Rust UUID library
 License:	BSD-3-Clause
 Group:		Development/Python
